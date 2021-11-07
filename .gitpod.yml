@@ -3,7 +3,7 @@ tasks:
       wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh -P /workspace/
       chmod +x /workspace/dotnet-install.sh
       /workspace/dotnet-install.sh -v 6.0.100-rc.2.21505.57 --install-dir /workspace/.dotnet
-      docker pull mcr.microsoft.com/mssql/server:2019-latest
+      docker pull debian:stable
     command: |
       echo 'export PATH=/workspace/.dotnet:$PATH' >> ~/.bashrc
       source ~/.bashrc
